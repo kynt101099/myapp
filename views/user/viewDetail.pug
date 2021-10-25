@@ -1,0 +1,11 @@
+extends ../layouts/common
+block content
+    h1(class="text-warning") View Detail User 
+
+    ul.list-group
+        li.list-group-item Name: 
+            span= user.name 
+        li.list-group-item Phone:
+            span= user.Phone
+        li.list-group-item Email: 
+            span= user.email        

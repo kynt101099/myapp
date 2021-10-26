@@ -5,8 +5,12 @@ const authRouters = require('./routes/auth.route');
 const userRouters = require('./routes/user.route');
 const cookieParser = require('cookie-parser');
 const middleware = require('./middleware/auth.middleware');
+var mongoose = require("mongoose");
+const apiUserRoutes = require('./api/routers/user.routers');
 
 const port = 3000;
+
+mongoose.connect('mongodb://localhost/express-demo');
 
 var bodyParser = require('body-parser');
 
@@ -32,6 +36,7 @@ app.get('/', function(request, response){
 
 app.use('/users', middleware.requiredAuth, userRouters);
 app.use('/auth', authRouters);
+app.use('/api/users', apiUserRoutes);
 
 app.listen(3000, function(){
     console.log(`Example app listening at http://localhost:${port}`)

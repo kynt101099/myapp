@@ -1,5 +1,7 @@
 const db = require('../db');
 const shortid = require('shortid');
+const User = require('../models/user.model');
+const Product = require('../models/product.model');
 
 module.exports.index =  function(request, response){
     var page = parseInt(request.query.page) || 1;
@@ -7,7 +9,6 @@ module.exports.index =  function(request, response){
 
     var start = (page - 1) * numItemPage;
     var end = page * numItemPage;
-
 
     response.render('user/index', {
         users: db.get('users').value().slice(start, end)

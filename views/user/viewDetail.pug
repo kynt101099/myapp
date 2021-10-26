@@ -8,4 +8,18 @@ block content
         li.list-group-item Phone:
             span= user.Phone
         li.list-group-item Email: 
-            span= user.email        
+            span= user.email     
+
+    form(action="/api/users/update" method='PUT')
+        div(class="form-group mb-3")
+            label(for="name") Name: 
+            input(id="name", class="form-control", name='name', type="text" value= user.name)
+        div(class="form-group mb-3")
+            label(for="phone") Phone: 
+            input(id="phone", class="form-control", name='phone', type="text", value=user.phone)
+        div(class="form-group mb-3")
+            label(for="email") Email: 
+            input(id="email", class="form-control", name='email', type="text", value=user.email)
+        div(class="form-group mb-3")
+            input(id="password", class="form-control", name='password', type="hidden", value="123456")
+        button(class="btn btn-primary") Update

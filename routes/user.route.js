@@ -8,6 +8,7 @@ const controllers = require('../controllers/user.controller');
 // const validate = require('../validate/user.validation');
 const validate = require('../middleware/validate.middleware');
 
+//link localhost:3000/user/...
 
 router.get('/', controllers.index);
 

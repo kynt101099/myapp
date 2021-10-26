@@ -1,5 +1,7 @@
 Test API using Postman:
 
+url connect database mongo: mongodb://localhost/express-demo
+
 Start project using command line: "npm start"
 
     #List all user

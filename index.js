@@ -10,12 +10,15 @@ const apiUserRoutes = require('./api/routers/user.routers');
 
 const port = 3000;
 
+//connect db to mongo
 mongoose.connect('mongodb://localhost/express-demo');
 
 var bodyParser = require('body-parser');
 
+//connect db to lowdb
 const db = require('./db')
 
+//views engine
 app.set('view engine', 'pug');
 app.set('views', './views');
 
@@ -23,7 +26,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser()); 
 
-
+//set folder static
 app.use(express.static('public'));
 
 app.get('/', function(request, response){
@@ -33,10 +36,10 @@ app.get('/', function(request, response){
 });
 
 
-
 app.use('/users', middleware.requiredAuth, userRouters);
 app.use('/auth', authRouters);
 app.use('/api/users', apiUserRoutes);
+
 
 app.listen(3000, function(){
     console.log(`Example app listening at http://localhost:${port}`)

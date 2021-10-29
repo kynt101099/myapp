@@ -9,8 +9,6 @@ router.get('/', controllers.index);
 
 router.get('/search', controllers.search);
 
-// router.get('/create', controllers.getCreate);
-
 router.get('/:id', controllers.getById);
 
 router.post('/create', controllers.postCreate);

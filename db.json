@@ -89,6 +89,27 @@
       "email": "dang@gmail.com",
       "password": "123456",
       "id": "W4XqVtj2_"
+    },
+    {
+      "name": "Khanh",
+      "phone": "0868777888",
+      "email": "khanh@gmail.com",
+      "password": "123456",
+      "id": "U-y-Ggpot"
+    },
+    {
+      "name": "Dang",
+      "phone": "0868123456",
+      "email": "kynt101099@gmail.com",
+      "password": "123456",
+      "id": "Z8-4tDzlL"
+    },
+    {
+      "name": "minh thanh",
+      "phone": "0868787898",
+      "email": "thanh@gmail.com",
+      "password": "123456",
+      "id": "CjHuexLQI"
     }
   ]
 }
